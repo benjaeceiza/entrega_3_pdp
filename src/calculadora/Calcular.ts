@@ -3,41 +3,46 @@ export class Calcular {
     private segundoNumero: number;
     private resultado: number;
 
+    
     public constructor(primerNumero: number, segundoNumero: number) {
         this.primerNumero = primerNumero;
         this.segundoNumero = segundoNumero;
         this.resultado = 0;
     }
+    
    
 
-    public setPrimerNumero(primerNumero: number): void {
 
+    public setPrimerNumero(primerNumero: number): void {
         this.primerNumero = primerNumero;
     }
+
 
     public setSegundoNumero(segundoNumero: number): void {
         this.segundoNumero = segundoNumero;
     }
 
-    public sumar(): number {
+    public sumar(): void {
         this.resultado = this.primerNumero + this.segundoNumero;
-        return this.resultado;
+      
+
     }
 
-    public restar(): number {
+    public restar(): void {
         this.resultado = this.primerNumero - this.segundoNumero;
-        return this.resultado;
-    }
-    public multiplicar(): number {
-        this.resultado = this.primerNumero * this.segundoNumero;
-        return this.resultado;
-    }
-    public dividir(): number {
-        if (this.segundoNumero === 0) {
-            console.log("Error: No se puede dividir entre cero.");
 
-        }
+    }
+    public multiplicar(): void {
+        this.resultado = this.primerNumero * this.segundoNumero;
+
+    }
+    public dividir(): void {
+      
         this.resultado = this.primerNumero / this.segundoNumero;
+    }
+
+    public getResultado(): number {
+
         return this.resultado;
     }
 }
